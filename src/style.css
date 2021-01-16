@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo", sans-serif;
+  color: #dae1e7;
+  overflow: hidden;
+}
+span {
+  color: #00909e;
+}
+h3 {
+  font-size: 2.5em;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+h1 {
+  font-size: 4em;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  position: absolute;
+  background: url(/img/joshua-aragon-FkjaN-7gWC0-unsplash.jpg) no-repeat center
+    center/cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.index-wrap {
+  display: flex;
+  background-color: #142850f5;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.menu {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  width: fit-content;
+}
+
+.menu-txt {
+  font-size: 1.5em;
+  font-weight: 500;
+  position: absolute;
+  top: 25px;
+  right: 90px;
+}
+.menu-txt p {
+  transition: all 1.5s ease-in-out;
+}
+
+.burger-btn {
+  margin: auto;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background-color: #dae1e7;
+  height: 40px;
+  width: 40px;
+  padding-top: 9px;
+  padding-left: 4px;
+  border-radius: 50%;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.burger-btn div {
+  width: 25px;
+  height: 2px;
+  margin: 4px;
+  background-color: #142550;
+  transition: all 0.5s ease-in;
+}
+.nav-menu {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  background-color: #dae1e7f2;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  clip-path: circle(0px at 150% -5%);
+  -webkit-clip-path: (0px at 150% -5%);
+  transition: all 1s linear;
+}
+
+.nav-menu.open {
+  clip-path: circle(2450px at 110% -10%);
+  -webkit-clip-path: (2450px at 110% -10%);
+}
+.item {
+  margin: 60% auto;
+  font-size: 2em;
+  color: #00909e;
+}
+.item i {
+  color: #00909e;
+  margin: 10px;
+}
+.item a {
+  color: #142550;
+}
+
+.banner {
+  margin: auto;
+  text-align: center;
+}
+
+.top-line {
+  height: 2px;
+  width: 400px;
+  background-color: #dae1e7;
+  margin: 15px 0 30px;
+  transform: translateX(-125%);
+  opacity: 0%;
+  animation-name: linetop;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+.bottom-line {
+  height: 2px;
+  width: 400px;
+  background-color: #dae1e7;
+  margin: 30px 0 15px;
+  transform: translateX(125%);
+  opacity: 0%;
+  animation-name: linebottom;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+
+.text-above {
+  opacity: 0;
+  animation-name: txtabove;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.text-bellow {
+  opacity: 0;
+  animation-name: txtbellow;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 3s;
+}
+
+.menu-txt.fading p {
+  opacity: 0;
+}
+
+.text-name {
+  opacity: 0;
+  animation-name: txtname;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+
+.burger-btn.active .burger-middle-line {
+  transform: translateX(-25px);
+  opacity: 0;
+}
+
+.burger-btn.active .burger-top-line {
+  transform: rotate(45deg) translate(4.5px, 4px);
+}
+
+.burger-btn.active .burger-bottom-line {
+  transform: rotate(-45deg) translate(4.5px, -4px);
+}
+
+@keyframes linetop {
+  0% {
+    opacity: 0;
+    transform: translateX(-125%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes linebottom {
+  0% {
+    opacity: 0;
+    transform: translateX(125%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes txtname {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes txtabove {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes txtbellow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 414px) {
+  h3 {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  .top-line,
+  .bottom-line {
+    width: 275px;
+  }
+  .top-line {
+    margin: 7.5px 0 15px;
+  }
+  .bottom-line {
+    margin: 15px 0 7.5px;
+  }
+  .menu-txt {
+    display: none;
+  }
+  .item {
+    margin: 60% auto;
+    font-size: 1.5em;
+    color: #00909e;
+  }
+}
