@@ -405,12 +405,12 @@ li {
   }
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .about-container {
-    height: 115vh;
+    height: 100vh;
   }
   .about-wrap {
-    height: 115vh;
+    height: 100vh;
   }
   .info-container {
     height: 100vh;
@@ -500,7 +500,7 @@ li {
   }
 }
 
-@media only screen and (min-width: 412px) and (max-width: 915px) {
+@media only screen and (min-width: 412px) and (max-width: 767px) {
   .about-container {
     height: 135vh;
   }
