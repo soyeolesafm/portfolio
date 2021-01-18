@@ -500,6 +500,18 @@ li {
   }
 }
 
+@media only screen and (min-width: 412px) and (max-width: 915px) {
+  .about-container {
+    height: 125vh;
+  }
+  .about-wrap {
+    height: 125vh;
+  }
+  .info-container {
+    height: 120vh;
+  }
+}
+
 @media (min-height: 1280) {
   .card-container {
     flex-direction: column;
