@@ -342,15 +342,15 @@ li {
 
 /* media queries */
 
-@media (min-width: 801px) {
-  .about-container {
+@media (min-width: 1025px) {
+  /* .about-container {
     height: 100vh;
   }
   .about-wrap {
-    height: 100vh;
-  }
+    height: 100;
+  } */
   .info-container {
-    height: 90vh;
+    height: 95%;
   }
 
   .card-container {
@@ -359,6 +359,7 @@ li {
 
   .card {
     width: 40%;
+    height: 600px;
   }
 
   .menu-txt {
