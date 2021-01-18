@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
   color: #dae1e7;
+  /* overflow-x: hidden; */
 }
 span {
   color: #00909e;
@@ -104,6 +105,7 @@ li {
 
 /* index pseudoselectors */
 .index-container {
+  overflow-x: hidden;
   position: absolute;
   background: url(/img/joshua-aragon-FkjaN-7gWC0-unsplash.jpg) no-repeat center
     center/cover;
@@ -338,7 +340,9 @@ li {
   }
 }
 
-@media (min-width: 375px) {
+/* media queries */
+
+@media (min-height: 568px) {
   .about-container {
     height: 195vh;
   }
@@ -351,17 +355,53 @@ li {
   }
 }
 
-/* media queries */
+@media (min-height: 640px) {
+  .about-container {
+    height: 185vh;
+  }
+  .about-wrap {
+    height: 185vh;
+  }
+  .info-container {
+    height: 180vh;
+    margin-top: 25px;
+  }
+}
+
+@media (min-height: 667px) {
+  .about-container {
+    height: 177vh;
+  }
+  .about-wrap {
+    height: 177vh;
+  }
+  .info-container {
+    height: 175vh;
+  }
+}
 
 @media (min-height: 736px) {
   .about-container {
-    height: 170vh;
+    height: 150vh;
   }
   .about-wrap {
-    height: 170vh;
+    height: 150vh;
   }
   .info-container {
-    height: 150vh;
+    height: 145vh;
+    margin-top: 25px;
+  }
+}
+
+@media (min-height: 740px) {
+  .about-container {
+    height: 157vh;
+  }
+  .about-wrap {
+    height: 157vh;
+  }
+  .info-container {
+    height: 155vh;
   }
 }
 
@@ -381,14 +421,18 @@ li {
     -webkit-clip-path: (1800px at 110% -10%);
   }
 }
-/* .card-container {
-    flex-direction: row;
+
+@media (min-height: 812px) {
+  .about-container {
+    height: 145vh;
   }
-
-  .card {
-    width: 40%;
-  }*/
-
+  .about-wrap {
+    height: 145vh;
+  }
+  .info-container {
+    height: 140vh;
+  }
+}
 @media (min-width: 801px) {
   .about-container {
     height: 100vh;
