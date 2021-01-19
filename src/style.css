@@ -177,7 +177,7 @@ li {
 
 /* about me pseudoelements */
 
-.about-container {
+.container {
   position: absolute;
   background: url(/img/joshua-aragon-FkjaN-7gWC0-unsplash.jpg) no-repeat center
     center/cover;
@@ -186,7 +186,7 @@ li {
   /* padding-bottom: 1px; */
 }
 
-.about-wrap {
+.wrapper {
   display: flex;
   background-color: #142850f5;
   width: 100%;
@@ -293,6 +293,28 @@ li {
   margin: auto;
 }
 
+.mobile-img {
+  width: 90%;
+}
+
+.full-img {
+  display: none;
+}
+
+.button {
+  width: 85px;
+  height: 30px;
+  background: #00909e;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.button p {
+  color: #dae1e7;
+  font-size: 0.7em;
+}
+
 /* animations */
 
 @keyframes linetop {
@@ -342,13 +364,32 @@ li {
 
 /* media queries */
 
-@media (min-width: 1025px) {
-  /* .about-container {
-    height: 100vh;
+@media (min-width: 768px) {
+  .work .full-img {
+    display: inline;
+    width: 70%;
   }
-  .about-wrap {
-    height: 100;
-  } */
+
+  .work .mobile-img {
+    display: none;
+  }
+
+  .project-images {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .project-images > * {
+    flex: 1 1 50%;
+  }
+
+  .project-images .mobile-img {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1025px) {
   .info-container {
     height: 95%;
   }
@@ -406,6 +447,14 @@ li {
   }
 
   .card-list ul li {
+    font-size: 1.25em;
+  }
+
+  .button {
+    width: 150px;
+    height: 50px;
+  }
+  .button p {
     font-size: 1.25em;
   }
 }
